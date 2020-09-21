@@ -15,7 +15,7 @@ module.exports.saveOrderToDatabase = function(userId, cervaTipo, cervejaTamaho) 
   item.cervejaTamanho = cervejaTamaho;
   item.userId = userId;
 
-  return saveItemToTable('ComprarCerva_Pedido', item);
+  return saveItemToTable('ComprarCervaPedido', item);
 };
 
 module.exports.saveUserToDatabase = function(userId, cervaTipo, cervejaTamaho) {
@@ -26,12 +26,12 @@ module.exports.saveUserToDatabase = function(userId, cervaTipo, cervejaTamaho) {
   item.cervejaTamanho = cervejaTamaho;
   item.userId = userId;
 
-  return saveItemToTable('ComprarCerva_User', item);
+  return saveItemToTable('ComprarCervaUser', item);
 };
 
 module.exports.findUserFavorite = function(userId) {
   const params = {
-    TableName: 'ComprarCerva_User',
+    TableName: 'ComprarCervaUser',
     Key: {
       userId
     }
